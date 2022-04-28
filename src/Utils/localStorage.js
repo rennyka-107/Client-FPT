@@ -12,3 +12,11 @@ export const saveAuth = (data) => {
 export const removeAuth = () => {
   localStorage.removeItem("user");
 };
+
+export const delay = ( function() {
+  var timer = 0;
+  return function(callback, ms) {
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+  };
+})();
